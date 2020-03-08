@@ -150,13 +150,14 @@
     background: 0 0;
     border: 0;
     border-radius: 3px;
+    // border-radius: 50%;
     color: inherit;
     cursor: pointer;
     flex-shrink: 0;
     overflow: visible;
     padding: 7px;
     position: relative;
-    transition: all .3s ease
+    transition: all .3s ease;
 }
 
 .plyr__control svg {
@@ -164,7 +165,7 @@
     fill: currentColor;
     height: 18px;
     pointer-events: none;
-    width: 18px
+    width: 18px;
 }
 
 .plyr__control:focus {
@@ -172,7 +173,7 @@
 }
 
 .plyr__control.plyr__tab-focus {
-    box-shadow: 0 0 0 5px rgba(0, 179, 255, .5);
+    box-shadow: 0 0 0 5px var(--purple);
     outline: 0
 }
 
@@ -417,7 +418,7 @@ a.plyr__control::before {
 }
 
 .plyr__menu__container .plyr__control[role=menuitemradio][aria-checked=true]::before {
-    background: #00b3ff
+    background: var(--purple);
 }
 
 .plyr__menu__container .plyr__control[role=menuitemradio][aria-checked=true]::after {
@@ -445,7 +446,7 @@ a.plyr__control::before {
     background: 0 0;
     border: 0;
     border-radius: 26px;
-    color: #00b3ff;
+    color: var(--purple);
     display: block;
     height: 19px;
     margin: 0;
@@ -816,7 +817,7 @@ a.plyr__control::before {
 .plyr--audio .plyr__control.plyr__tab-focus,
 .plyr--audio .plyr__control:hover,
 .plyr--audio .plyr__control[aria-expanded=true] {
-    background: #00b3ff;
+    background: var(--purple);
     color: #fff
 }
 
@@ -914,12 +915,12 @@ a.plyr__control::before {
 .plyr--video .plyr__control.plyr__tab-focus,
 .plyr--video .plyr__control:hover,
 .plyr--video .plyr__control[aria-expanded=true] {
-    background: #00b3ff;
+    background: var(--purple);
     color: #fff
 }
 
 .plyr__control--overlaid {
-    background: rgba(0, 179, 255, .8);
+    background: var(--purple);
     border: 0;
     border-radius: 100%;
     color: #fff;
@@ -939,7 +940,7 @@ a.plyr__control::before {
 
 .plyr__control--overlaid:focus,
 .plyr__control--overlaid:hover {
-    background: #00b3ff
+    background: var(--purple);
 }
 
 .plyr--playing .plyr__control--overlaid {
