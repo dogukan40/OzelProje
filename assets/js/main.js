@@ -124,5 +124,15 @@ $(function () {
             <p><strong>Se (Peltek)</strong>Dilin yan kısmıyla sağ veya sol taraftaki üst azı dişierin damakla bitişen yerine vurularak çıkarılır. Kalın okunur.</p>
             </div>`)
         }
-    })
+    });
+
+    var video = $(".video")[0],
+        videoB = $(".videoB")[0];
+    $('.play').click(function () {
+        $(this).html($(this).html() == 'Play' ? 'Pause' : 'Play');
+
+        $(".videoB").addClass("show");
+        video.paused ? video.play() : video.pause();
+        videoB.paused ? videoB.play() : videoB.pause();
+    });
 });
