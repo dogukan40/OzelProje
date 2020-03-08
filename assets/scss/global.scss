@@ -1,0 +1,49 @@
+.lock-position {
+    height: 100% !important;
+    overflow: hidden !important;
+    width: 100% !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+}
+
+.wrapper {
+    @include bp(tablet-small) {
+        margin-top: 75px;
+    }
+}
+
+// display: -webkit-box;
+// -webkit-line-clamp: 3;
+// -webkit-box-orient: vertical;  
+// overflow: hidden;
+
+
+
+.blog-head {
+    margin-top: 120px;
+
+    &__title {
+        font-size: 42px;
+        font-weight: 900;
+        text-align: center;
+
+    }
+
+    &__txt {
+        font-size: 20px;
+        margin-top: 20px;
+        text-align: center;
+    }
+}
+
+// logo
+// background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOQAAAA0CAYAAACaaZSiAAAAGXRFW…CQkABSSEgAKSQkJIAUEhJACgkJCSCFhASQQkJCmek/AQYAr0ugT2d/F5cAAAAASUVORK5CYII=);
+
+
+.home {
+    display: flex;
+    margin-top: 100px;
+}

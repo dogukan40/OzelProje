@@ -1,0 +1,48 @@
+.sidebar {
+    width: 320px;
+    flex-shrink: 0;
+    background: #ffffff;
+    height: 100%;
+
+    &-ol {
+        counter-reset: my-awesome-counter;
+        list-style: none;
+        margin-top: 35px;
+    }
+
+    &-item {
+        counter-increment: my-awesome-counter;
+        display: flex;
+
+        &:not(:first-child) {
+            margin-top: 25px;
+        }
+
+        &::before {
+            content: counter(my-awesome-counter) '.';
+            color: var(--purple);
+            font-size: 3em;
+            display: inline-block;
+            width: 55px;
+            flex-shrink: 0;
+            font-weight: 600;
+            text-align: right;
+        }
+
+        .card__title {
+            margin-top: 0;
+            margin-left: 20px;
+        }
+
+        &:hover {
+            .card__title {
+                background-position: 0%;
+                background-size: 340% 100%;
+
+                span {
+                    background-size: 100% 100%;
+                }
+            }
+        }
+    }
+}

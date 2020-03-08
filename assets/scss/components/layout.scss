@@ -1,0 +1,49 @@
+$maxw: 1400px;
+
+.wrapper {
+    margin-top: 50px;
+}
+
+.custom-container {
+    max-width: $maxw;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include bp(tablet) {
+        // padding-right: 30px;
+        // padding-left: 30px;
+    }
+
+    @include bp(mobile) {
+        padding-right: 25px;
+        padding-left: 25px;
+        max-width: 100%;
+    }
+
+    @include bp(mobile-small) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    @media screen and (max-width:375px) {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+.inner-container {
+    margin-left: 50px;
+    margin-right: 50px;
+
+    @include bp(mobile) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    margin-right: 50px;
+}

@@ -1,0 +1,175 @@
+.card {
+    border-radius: 20px;
+    overflow: hidden;
+    transition: .3s;
+    box-shadow: 0 0 20px #d9d9d9,
+        0 0 20px #ffffff;
+
+
+    &__wrp {
+        display: block;
+        height: 100%;
+        position: relative;
+    }
+
+    &__img {
+        width: 100%;
+        height: 150px;
+        position: relative;
+
+        img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        &__overlay {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+
+            &::before {
+                content: '';
+                background: #786ce1;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                opacity: 0;
+                z-index: 2;
+                transition: all .3s;
+            }
+
+            &::after {
+                content: '';
+                background-image: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0) 100%);
+                width: 100%;
+                height: 60%;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+        }
+    }
+
+    &__cnt {
+        padding: 20px;
+    }
+
+    &__info {
+        display: flex;
+    }
+
+    &__date,
+    &__comment-count {
+        display: inline-block;
+        color: var(--black3);
+        font-size: 14px;
+        font-family: var(--family2);
+    }
+
+    &__date {
+        margin-right: 10px;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 1.5;
+        margin-top: 15px;
+        color: var(--card-title);
+        -webkit-transition: all 0.4s cubic-bezier(0, 0, .23, 1);
+        transition: all 0.4s cubic-bezier(0, 0, .23, 1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: var(--webkit-purple-gradient);
+        background-image: var(--purple-gradient);
+        background-size: 300% 100%;
+        background-position: 100%;
+
+        span {
+            width: 100%;
+            background: linear-gradient(to top, rgba(127, 107, 228, 0) 0%, rgba(127, 107, 228, .35) 0%, rgba(127, 107, 228, .35) 20%, rgba(127, 107, 228, 0) 20%);
+            background-position: 0 80%;
+            background-size: 0 100%;
+            background-repeat: no-repeat;
+            transition: 250ms linear;
+        }
+    }
+
+    &-tags {
+        display: inline-block;
+        margin-top: 20px;
+        padding-left: 40px;
+        position: relative;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        width: calc(100% - 50px);
+        font-family: var(--family2);
+        color: var(--card-title);
+
+        &::before {
+            content: '';
+            background-image: linear-gradient(var(--card-title), var(--card-title));
+            background-size: 30px 1px;
+            background-position: 0 50%;
+            background-repeat: no-repeat;
+            width: 40px;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        span:not(:last-child) {
+            &::after {
+                content: ',';
+            }
+        }
+    }
+
+    &:hover {
+        box-shadow: 0 0 30px #d9d9d9,
+            0 0 30px #ffffff;
+        transform: translateY(-10px);
+
+        .card__title {
+            background-position: 0%;
+            background-size: 340% 100%;
+
+            span {
+                background-size: 100% 100%;
+            }
+        }
+
+        .card__img__overlay {
+            &::before {
+                opacity: .4;
+            }
+
+        }
+    }
+}
+
+.new-post {
+    &::before {
+        content: 'YENİ';
+        font-weight: 600;
+        font-size: 15px;
+        display: inline-block;
+        padding: 3px 5px;
+        border-radius: 3px;
+        border: 2px solid var(--orange);
+        color: var(--orange);
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+}

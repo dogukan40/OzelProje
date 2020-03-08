@@ -1,0 +1,29 @@
+$h:60px;
+
+.nav {
+    height: $h;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: #de4848;
+
+    &-wrp {
+        display: flex;
+        align-items: center;
+        height: $h;
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.logo {
+    position: relative;
+
+    img {
+        display: block;
+        height: 25px;
+        object-fit: contain;
+    }
+}
