@@ -67,55 +67,61 @@ $(function () {
         if ($(this).attr("data-target") == 'kaf') {
             $(this).attr("data-hover-content", `<div class='hover-content'>
             <img src='./assets/img/kaf.jpg' />
-            <p><strong>Kalın Ha</strong>Türkçedeki 'g' harfine benzer.</p>
+            <p><strong>Kaf</strong>Türkçedeki 'g' harfine benzer. Dilin sonu damağa vurularak çıkarılır. Kalın okunur.</p>
             </div>`)
         }
         if ($(this).attr("data-target") == 'ayn') {
             $(this).attr("data-hover-content", `<div class='hover-content'>
             <img src='./assets/img/ayn.jpg' />
-            <p><strong>Ayn</strong>İnce sıfatlı. Okurken kalına yakın bir sesle okunur.</p>
+            <p><strong>Ayn</strong>Boğazımızın ortasını hafif sıkarak çıkarılır. İnce sıfatlı bir harf olmasına rağmen kalına yakın bir sesle okunur.</p>
             </div>`)
         }
         if ($(this).attr("data-target") == 'gayn') {
             $(this).attr("data-hover-content", `<div class='hover-content'>
             <img src='./assets/img/gayn.jpg' />
-            <p><strong>Ğayn</strong>Türkçedeki 'ğ' harfine benzer.</p>
+            <p><strong>Ğayn</strong>Türkçedeki 'ğ' harfine benzer. Boğazımızın ağıza yakın yerini hafif sıkarak çıkarılır. Kalın okunur.</p>
             </div>`)
         }
         if ($(this).attr("data-target") == 'tı') {
             $(this).attr("data-hover-content", `<div class='hover-content'>
             <img src='./assets/img/tı.jpg' />
-            <p><strong>Tı</strong>Boğazımızı hırıldatarak çıkarırız.</p>
+            <p><strong>Tı</strong>Dilin ucu üst dişierin damakla bitişen yerine vurularak çıkarılır. Kalın okunur.</p>
             </div>`)
         }
         if ($(this).attr("data-target") == 'zı') {
             $(this).attr("data-hover-content", `<div class='hover-content'>
             <img src='./assets/img/zı.jpg' />
-            <p><strong>Zı (Kalın - Peltek)</strong>Boğazımızı hırıldatarak çıkarırız.</p>
+            <p><strong>Zı (Peltek - Kalın)</strong>Dilin ucu, dişlerin arasından hafifçe çıkarılır. Kalın okunur.</p>
             </div>`)
         }
         if ($(this).attr("data-target") == 'zel') {
             $(this).attr("data-hover-content", `<div class='hover-content'>
             <img src='./assets/img/zel.jpg' />
-            <p><strong>Zel (Peltek)</strong>Boğazımızı hırıldatarak çıkarırız.</p>
+            <p><strong>Ze (Peltek)</strong>Dilin ucu, dişierin arasından hafifçe çıkarılır. İnce okunur.</p>
             </div>`)
         }
         if ($(this).attr("data-target") == 'ha') {
             $(this).attr("data-hover-content", `<div class='hover-content'>
             <img src='./assets/img/ha.jpg' />
-            <p><strong>Ha</strong>İnce sıfatlı. Okurken kalına yakın bir sesle okunur.</p>
+            <p><strong>Ha</strong>Boğazımızın ortasından ve boğaz hafif sıkılarak hırıldatmadan çıkarılır. İnce sıfatlı bir harf olmasına rağmen kalına yakın bir sesle okunur.</p>
             </div>`)
         }
         if ($(this).attr("data-target") == 'k-ha') {
             $(this).attr("data-hover-content", `<div class='hover-content'>
             <img src='./assets/img/k-ha.jpg' />
-            <p><strong>Kalın Ha</strong>Boğazımızı hırıldatarak çıkarırız.</p>
+            <p><strong>Hı (Hırıltılı Harf)</strong>Boğazımızı hafif sıkarak ve biraz hırıldatarak çıkarılır. Kalın okunur.</p>
             </div>`)
         }
         if ($(this).attr("data-target") == 'se') {
             $(this).attr("data-hover-content", `<div class='hover-content'>
             <img src='./assets/img/se.jpg' />
-            <p><strong>Se (Peltek)</strong>Boğazımızı hırıldatarak çıkarırız.</p>
+            <p><strong>Se (Peltek)</strong>Dilin ucu, dişlerin arasından hafifçe çıkarılır. İnce okunur.</p>
+            </div>`)
+        }
+        if ($(this).attr("data-target") == 'dad') {
+            $(this).attr("data-hover-content", `<div class='hover-content'>
+            <img src='./assets/img/se.jpg' />
+            <p><strong>Se (Peltek)</strong>Dilin yan kısmıyla sağ veya sol taraftaki üst azı dişierin damakla bitişen yerine vurularak çıkarılır. Kalın okunur.</p>
             </div>`)
         }
     })
