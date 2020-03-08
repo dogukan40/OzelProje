@@ -135,4 +135,6 @@ $(function () {
         video.paused ? video.play() : video.pause();
         videoB.paused ? videoB.play() : videoB.pause();
     });
+
+
 });

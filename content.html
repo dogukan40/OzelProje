@@ -47,55 +47,29 @@
                                 Melek
                                 Görevlendirilen Zikirler</span>
                         </div>
+
                         <div class="video-slider js-video-slider">
                             <div class="swiper-wrapper">
                                 <div class="video-slide swiper-slide">
-                                    <div class="embed-container">
-                                        <video width="320" height="240" controls="" class="videoA">
-                                            <source
-                                                src="https://ia601502.us.archive.org/28/items/entesirlisifaduasicubbeliahmethocaefendilalegultv/En%20tesirli%20%C5%9Fif%C3%A2%20du%C3%A2s%C4%B1%20-%20C%C3%BCbbeli%20Ahmet%20Hocaefendi%20L%C3%A2leg%C3%BCl%20TV.mp4"
-                                                type="video/mp4">
-                                            Your browser does not support the video tag.
-                                        </video>
-                                        <video width="320" height="240" controls="" muted loop class="videoB show">
-                                            <source
-                                                src="https://ia601502.us.archive.org/28/items/entesirlisifaduasicubbeliahmethocaefendilalegultv/En%20tesirli%20%C5%9Fif%C3%A2%20du%C3%A2s%C4%B1%20-%20C%C3%BCbbeli%20Ahmet%20Hocaefendi%20L%C3%A2leg%C3%BCl%20TV.mp4"
-                                                type="video/mp4">
-                                            Your browser does not support the video tag.
-                                        </video>
-                                    </div>
+                                    <video width="320" height="240" controls="" class="video">
+                                        <source
+                                            src="https://ia601502.us.archive.org/28/items/entesirlisifaduasicubbeliahmethocaefendilalegultv/En%20tesirli%20%C5%9Fif%C3%A2%20du%C3%A2s%C4%B1%20-%20C%C3%BCbbeli%20Ahmet%20Hocaefendi%20L%C3%A2leg%C3%BCl%20TV.mp4"
+                                            type="video/mp4">
+                                    </video>
                                 </div>
                                 <div class="video-slide swiper-slide">
-                                    <div class="embed-container">
-                                        <video width="320" height="240" controls="" class="videoA">
-                                            <source
-                                                src="https://ia801507.us.archive.org/27/items/uyanincaokunacakdua/Uyan%C4%B1nca%20okunacak%20dua.mp4"
-                                                type="video/mp4">
-                                            Your browser does not support the video tag.
-                                        </video>
-                                        <video width="320" height="240" controls="" muted loop class="videoB show">
-                                            <source
-                                                src="https://ia801507.us.archive.org/27/items/uyanincaokunacakdua/Uyan%C4%B1nca%20okunacak%20dua.mp4"
-                                                type="video/mp4">
-                                            Your browser does not support the video tag.
-                                        </video>
-                                    </div>
+                                    <video width="320" height="240" controls="" class="video">
+                                        <source
+                                            src="https://ia801507.us.archive.org/27/items/uyanincaokunacakdua/Uyan%C4%B1nca%20okunacak%20dua.mp4"
+                                            type="video/mp4">
+                                    </video>
                                 </div>
                                 <div class="video-slide swiper-slide">
-                                    <div class="embed-container">
-                                        <video width="320" height="240" controls="" class="videoA">
-                                            <source
-                                                src="https://ia601500.us.archive.org/27/items/tesehhuddua/Te%C5%9Fehh%C3%BCd%20dua.mp4"
-                                                type="video/mp4">
-                                            Your browser does not support the video tag.
-                                        </video>
-                                        <video width="320" height="240" controls="" muted loop class="videoB show">
-                                            <source
-                                                src="https://ia601500.us.archive.org/27/items/tesehhuddua/Te%C5%9Fehh%C3%BCd%20dua.mp4"
-                                                type="video/mp4">
-                                            Your browser does not support the video tag.
-                                        </video>
-                                    </div>
+                                    <video width="320" height="240" controls="" class="video">
+                                        <source
+                                            src="https://ia601500.us.archive.org/27/items/tesehhuddua/Te%C5%9Fehh%C3%BCd%20dua.mp4"
+                                            type="video/mp4">
+                                    </video>
                                 </div>
                             </div>
                             <div class="slider-nav slider-prev passive">
@@ -294,54 +268,67 @@
     <script src="./assets/js/swiper.min.js"></script>
     <script src="./assets/js/isotope.min.js"></script>
     <script src="./assets/js/hammer.min.js"></script>
+    <script src="./assets/js/plyr.js"></script>
     <script src="./assets/js/main.js"></script>
     <script>
-        var videoSlider = new Swiper(".js-video-slider", {
-            effect: 'coverflow',
-            grabCursor: false,
-            loop: false,
-            keyboard: true,
-            centeredSlides: false,
-            slidesPerView: 1,
-            spaceBetween: 20,
-            speed: 500,
-            simulateTouch: false,
-            navigation: {
-                nextEl: '.js-video-slider .slider-next',
-                prevEl: '.js-video-slider .slider-prev',
-            },
-            coverflowEffect: {
-                rotate: 0,
-                stretch: 0,
-                depth: 0,
-                modifier: 1,
-                slideShadows: false
-            },
-            breakpoints: {
+        document.addEventListener('DOMContentLoaded', () => {
 
-            },
-            on: {
-                slideChange: function () {
-                    document.querySelectorAll("video").forEach(p => {
-                        p.pause();
-                    });
 
-                    if (videoSlider.isEnd) {
-                        document.querySelector(".slider-nav.slider-next").classList.add("passive");
-                    } else {
-                        document.querySelector(".slider-nav.slider-next").classList.remove("passive");
-                    }
+            document.querySelectorAll(".video").forEach(p => {
+                new Plyr(p);
+            })
 
-                    if (videoSlider.isBeginning) {
-                        document.querySelector(".slider-nav.slider-prev").classList.add("passive");
-                    } else {
-                        document.querySelector(".slider-nav.slider-prev").classList.remove("passive");
-                    }
+            var videoSlider = new Swiper(".js-video-slider", {
+                effect: 'coverflow',
+                grabCursor: false,
+                loop: false,
+                keyboard: true,
+                centeredSlides: false,
+                slidesPerView: 1,
+                spaceBetween: 20,
+                speed: 500,
+                simulateTouch: false,
+                navigation: {
+                    nextEl: '.js-video-slider .slider-next',
+                    prevEl: '.js-video-slider .slider-prev',
                 },
-                slideChangeTransitionEnd: function () {
-                    document.querySelector(".video-slide.swiper-slide-active video").play();
+                coverflowEffect: {
+                    rotate: 0,
+                    stretch: 0,
+                    depth: 0,
+                    modifier: 1,
+                    slideShadows: false
+                },
+                breakpoints: {
+
+                },
+                on: {
+                    slideChange: function () {
+                        document.querySelectorAll("video").forEach(p => {
+                            p.pause();
+                        });
+
+                        if (videoSlider.isEnd) {
+                            document.querySelector(".slider-nav.slider-next").classList.add(
+                                "passive");
+                        } else {
+                            document.querySelector(".slider-nav.slider-next").classList.remove(
+                                "passive");
+                        }
+
+                        if (videoSlider.isBeginning) {
+                            document.querySelector(".slider-nav.slider-prev").classList.add(
+                                "passive");
+                        } else {
+                            document.querySelector(".slider-nav.slider-prev").classList.remove(
+                                "passive");
+                        }
+                    },
+                    slideChangeTransitionEnd: function () {
+                        document.querySelector(".video-slide.swiper-slide-active video").play();
+                    }
                 }
-            }
+            });
         });
     </script>
 </body>
